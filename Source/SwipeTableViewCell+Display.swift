@@ -13,7 +13,15 @@ extension SwipeTableViewCell {
         set { setSwipeOffset(newValue, animated: false) }
         get { return frame.midX - bounds.midX }
     }
-    
+
+    public var isDragging: Bool {
+        self.state == .dragging
+    }
+
+    public var isSwipedOut: Bool {
+        self.state == .right || self.state == .left
+    }
+
     /**
      Hides the swipe actions and returns the cell to center.
      
