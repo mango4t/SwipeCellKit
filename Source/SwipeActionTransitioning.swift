@@ -10,6 +10,7 @@ import UIKit
 /**
  Adopt the `SwipeActionTransitioning` protocol in objects that implement custom appearance of actions during transition.
  */
+@MainActor
 public protocol SwipeActionTransitioning {
     /**
      Tells the delegate that transition change has occured.
